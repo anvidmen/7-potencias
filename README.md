@@ -37,7 +37,7 @@ In this web site will be shown all relevant information about the school, like t
 
 ### Blocks
 
-![blocks](./docS/images/blocks.png)
+![blocks](./docs/images/blocks.png)
 
 ## Modules / Components
 
