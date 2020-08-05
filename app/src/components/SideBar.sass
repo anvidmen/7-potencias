@@ -1,3 +1,5 @@
+@import StyleColors
+
 .sidebar
   background: #890620
   box-shadow: 2px 0px 5px rgba(245, 124, 124, 0.5)
@@ -23,7 +25,7 @@
       height: 5rem
       width: 15rem
       display: flex
-      background: #890620
+      background: $bg-color-toolbar
       justify-content: center
       align-content: center
       line-height: 5rem
@@ -39,6 +41,7 @@
       button
         font-size: 1.2rem
         align-self: center
+        opacity: 1
         background: transparent
         height: fit-content
         color: white
@@ -60,7 +63,7 @@
       display: none
 
     li:hover
-      background: rgba(245, 124, 124, 0.5)
+      background: $bg-li-hover
 
 @media (max-width: 993px)
   .sidebar
