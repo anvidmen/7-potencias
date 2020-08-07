@@ -1,10 +1,10 @@
 import React from 'react'
-import './HomePage.sass'
+import './Home.sass'
 import Carousel from './Carousel'
 
 export default function () {
   return (
-    <section className='home-page'>
+    <section className='home'>
       <Carousel />
 
       <h2>Introduction</h2>
