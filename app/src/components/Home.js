@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './Home.sass'
+import './HomePage.sass'
+import Carousel from './Carousel'
 import { retrieveUser } from 'client-logic'
 
 export default class extends Component {
@@ -20,8 +21,10 @@ export default class extends Component {
 
   render () {
     return (
-      <section className='home'>
-        <h1 className='salute'>Hello! {this.state.name}, welcome to your dance school 7 Potencias.</h1>
+      <section className='home-page'>
+        <h1>Hello {this.state.name}!</h1>
+        <Carousel />
+
         <h2>Introduction</h2>
         <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br />
