@@ -229,6 +229,10 @@ temp/
 
 # End of https://www.gitignore.io/api/node
 
+#CSS files
+*.css
+*.css.map
+
 # Other
 
 package-lock.json
@@ -236,3 +240,4 @@ yarn.lock
 .editorconfig
 
 # End Other
+
