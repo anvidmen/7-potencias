@@ -11,8 +11,8 @@ export default function ({ reference, cart, removeCart }) {
       <div className='button-items'>
         {
           cart.length === 0
-            ? <Link disabled="true" className='checkout-button' to='/' onClick={(event) => event.preventDefault()}>Go to Check Out</Link>
-            : <Link disabled="false" className='checkout-button' to='/checkout'>Check Out</Link>
+            ? <Link disabled className='checkout-button' to='/' onClick={(event) => event.preventDefault()}>Go to Check Out</Link>
+            : <Link className='checkout-button' to='/checkout'>Check Out</Link>
         }
         <RemoveCart clearCart={removeCart} />
       </div>
