@@ -1,9 +1,12 @@
 import React from 'react'
 import './Landing.sass'
+import Carousel from './Carousel'
 
 export default function () {
   return (
     <section className='landing'>
+      <Carousel />
+
       <h2>Introduction</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br />
