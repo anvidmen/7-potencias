@@ -7,23 +7,21 @@ import SideBarToggle from './SideBarToggle'
 
 export default function ({ onLogout, validateUserLogged, toggleHiddenDropdown, cartToggleRef, quantityCart, toggleSideBar }) {
   return (
-    <header className='toolbar'>
-      <nav className='toolbar__navigation'>
-        <div className='toolbar__logo' />
-        <div className='spacer' />
-        <div className='toolbar__navigation-items'>
-          <ul>
-            <Link to='home'>Home</Link>
-            <Link to='/lessons'>Classes Online</Link>
-          </ul>
+    <nav className='navbar'>
+      <div className='spacer2' />
+      <div className='navbar-items'>
+        <ul>
+          <Link to='home'>Home</Link>
+          <Link to='/lessons'>Classes Online</Link>
+        </ul>
+      </div>
+      {validateUserLogged() && (<>
+        <div className='checkout-container'>
+          <div className='checkout-icon' />
+          <button onClick={onLogout}>LOGOUT</button>
         </div>
-        <div className='spacer2' />
-        {validateUserLogged() && (<>
-          <div className='checkout-container'>
-            <div className='checkout-icon' />
-            <button onClick={onLogout}>LOGOUT</button>
-          </div>
-        </>)}
+      </>)}
+      <div className='icons-container'>
         {!validateUserLogged() && (<>
           <div className='register-container'>
             <div className='register-icon' />
@@ -31,12 +29,10 @@ export default function ({ onLogout, validateUserLogged, toggleHiddenDropdown, c
             <Link to='/login'>Login</Link>
           </div>
         </>)}
-        <div className='icons-container'>
-          <CartToggle toggleHiddenDropdown={toggleHiddenDropdown} reference={cartToggleRef} />
-          <CartQuantityIcon quantity={quantityCart} />
-        </div>
-        <SideBarToggle toggleSideBar={toggleSideBar} />
-      </nav>
-    </header>
+        <CartToggle toggleHiddenDropdown={toggleHiddenDropdown} reference={cartToggleRef} />
+        <CartQuantityIcon quantity={quantityCart} />
+      </div>
+      <SideBarToggle toggleSideBar={toggleSideBar} />
+    </nav>
   )
 }

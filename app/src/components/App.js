@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Landing, Login, Register, Home, NavBar, Products, Footer, CartDropdown, SideBar, Checkout, Order } from '../components'
+import { Landing, Login, Register, Home, Header, NavBar, Products, Footer, CartDropdown, SideBar, Checkout, Order } from '../components'
 import { isUserSessionValid, logoutUser, isUserLoggedIn, updateCart, retrieveCart, retrieveUser, deleteCart, placeOrder } from 'client-logic'
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import { useOutsideClick } from '../hooks/outsideClick'
@@ -149,6 +149,7 @@ export default withRouter(function ({ history }) {
 
   return (
     <div className='app'>
+      <Header />
       <NavBar onLogout={handleLogout} validateUserLogged={isUserLoggedIn} toggleHiddenDropdown={toggleHiddenDropdown} cartToggleRef={ref} quantityCart={numItemsCart} toggleSideBar={toggleSideBar} />
       <main>
         {cartDropdownHidden ? null : (<CartDropdown key='cartDropdown' reference={ref} cart={cart} removeCart={handleDeleteCart} />)}
