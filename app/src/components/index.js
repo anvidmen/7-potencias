@@ -4,6 +4,7 @@ import Login from './Login'
 import Register from './Register'
 import Home from './Home'
 import Landing from './Landing'
+import Header from './Header'
 import NavBar from './NavBar'
 import Products from './Products'
 import Feedback from './Feedback'
@@ -21,6 +22,7 @@ export {
   Register,
   Home,
   Landing,
+  Header,
   NavBar,
   Products,
   Feedback,

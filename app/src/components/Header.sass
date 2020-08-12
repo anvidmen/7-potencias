@@ -1,0 +1,40 @@
+@import Panel
+@import StyleColors
+
+.header
+  top: 0
+  background: white
+  height: 180px
+  padding: 1.5rem 1.5rem
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .toolbar__logo
+    background-repeat: no-repeat
+    background-image: url("images/logo.png")
+    background-size: contain
+    background-position: center center
+    width: -moz-max-content
+    width: max-content
+    height: 100%
+    max-width: 100%
+    min-width: 200px !important
+    flex: 1 1
+    flex-wrap: nowrap
+    overflow: visible
+    background-position: center
+    align-self: end
+
+    a
+      min-height: inherit
+      min-width: inherit
+  
+  .toolbar__logo:hover
+    -webkit-filter: drop-shadow(2px 4px 2px $web-color-filter)
+    filter: url(#drop-shadow)
+    -ms-filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=16, OffY=16, Color=$web-color-filter)
+    filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=16, OffY=16, Color=$web-color-filter)
+    filter: drop-shadow(2px 4px 2px$glob-color)
+    cursor: pointer
+
