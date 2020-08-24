@@ -19,7 +19,6 @@ export default function () {
         infinite
         speed={500}
         slidesToShow={1}
-        arrows
         slidesToScroll={1}
         className='slides'
       >
