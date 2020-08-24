@@ -153,7 +153,7 @@ export default withRouter(function ({ history }) {
       <NavBar onLogout={handleLogout} validateUserLogged={isUserLoggedIn} toggleHiddenDropdown={toggleHiddenDropdown} cartToggleRef={ref} quantityCart={numItemsCart} toggleSideBar={toggleSideBar} />
       <main>
         {cartDropdownHidden ? null : (<CartDropdown key='cartDropdown' reference={ref} cart={cart} removeCart={handleDeleteCart} />)}
-        {sideBarHidden ? null : (<SideBar onLogout={handleLogout} validateUserLogged={isUserLoggedIn} toggleHiddenDropdown={toggleHiddenDropdown} />)}
+        {sideBarHidden ? null : (<SideBar/>)}
         <Route exact path='/' render={() => <Landing />} />
         <Route path='/register' render={() => isUserLoggedIn() ? <Redirect to='/home' /> : <Register onRegister={handleRegister} onGoToLogin={handleGoToLogin} />} />
         <Route path='/login' render={() => isUserLoggedIn() ? <Redirect to='/home' /> : <Login onLogin={handleLogin} onGoToRegister={handleGoToRegister} />} />
