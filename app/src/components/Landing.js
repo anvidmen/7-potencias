@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.sass'
 import Carousel from './Carousel'
 
-export default function () {
+const Landing = () => {
   return (
     <section className='home'>
       <Carousel />
@@ -38,3 +38,5 @@ export default function () {
     </section>
   )
 }
+
+export default Landing

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ({ clearCart }) {
+const RemoveCart = ({ clearCart }) => {
   const handleRemoveCart = event => {
     event.preventDefault()
 
@@ -11,3 +11,5 @@ export default function ({ clearCart }) {
     <button className='clear-cart' onClick={handleRemoveCart}>Clear Cart</button>
   )
 }
+
+export default RemoveCart

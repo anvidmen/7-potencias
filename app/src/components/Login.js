@@ -4,7 +4,7 @@ import Feedback from './Feedback'
 import './Feedback.sass'
 import { loginUser } from 'client-logic'
 
-export default function ({ onLogin, onGoToRegister }) {
+const Login = ({ onLogin, onGoToRegister }) => {
   const [error, setError] = useState()
 
   const handleSubmit = event => {
@@ -41,3 +41,5 @@ export default function ({ onLogin, onGoToRegister }) {
     </section>
   )
 }
+
+export default Login

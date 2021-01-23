@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.sass'
 
-export default function () {
+const Footer = () => {
   return (
     <footer>
       <section className='footer'>
@@ -15,3 +15,5 @@ export default function () {
     </footer>
   )
 }
+
+export default Footer

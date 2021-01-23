@@ -3,7 +3,7 @@ import Feedback from './Feedback'
 import './Register.sass'
 import { registerUser } from 'client-logic'
 
-export default function ({ onRegister, onGoToLogin }) {
+const Register = ({ onRegister, onGoToLogin }) => {
   const [error, setError] = useState()
 
   const handleSubmit = event => {
@@ -46,3 +46,5 @@ export default function ({ onRegister, onGoToLogin }) {
     </section>
   )
 }
+
+export default Register

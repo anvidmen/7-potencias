@@ -4,7 +4,7 @@ import CartItems from './CartItems'
 import { Link } from 'react-router-dom'
 import './Checkout.sass'
 
-export default function ({ cart, removeCart, checkout }) {
+const Checkout = ({ cart, removeCart, checkout }) => {
   const handleCheckout = event => {
     event.preventDefault()
 
@@ -31,3 +31,5 @@ export default function ({ cart, removeCart, checkout }) {
     </section>
   )
 }
+
+export default Checkout

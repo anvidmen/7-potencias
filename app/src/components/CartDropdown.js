@@ -4,7 +4,7 @@ import RemoveCart from './RemoveCart'
 import CartItems from './CartItems'
 import { Link } from 'react-router-dom'
 
-export default function ({ reference, cart, removeCart }) {
+const CartDropdown = ({ reference, cart, removeCart }) => {
   return (
     <section className='cart-dropdown' ref={reference}>
       <CartItems cart={cart} />
@@ -20,3 +20,5 @@ export default function ({ reference, cart, removeCart }) {
     </section>
   )
 }
+
+export default CartDropdown

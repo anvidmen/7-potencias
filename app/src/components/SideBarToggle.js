@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ({ toggleSideBar }) {
+const SideBarToggle = ({ toggleSideBar }) => {
   const sideBarToggleHandler = event => {
     event.preventDefault()
 
@@ -12,3 +12,5 @@ export default function ({ toggleSideBar }) {
     <div className='toggle-button' onClick={sideBarToggleHandler} />
   )
 }
+
+export default SideBarToggle
