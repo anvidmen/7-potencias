@@ -5,7 +5,14 @@ import CartToggle from './CartToggle'
 import CartQuantityIcon from './CartQuantityIcon'
 import SideBarToggle from './SideBarToggle'
 
-export default function ({ onLogout, validateUserLogged, toggleHiddenDropdown, cartToggleRef, quantityCart, toggleSideBar }) {
+const NavBar = ({
+  onLogout,
+  validateUserLogged,
+  toggleHiddenDropdown,
+  cartToggleRef,
+  quantityCart,
+  toggleSideBar
+}) => {
   return (
     <header className='toolbar'>
       <nav className='toolbar__navigation'>
@@ -18,19 +25,21 @@ export default function ({ onLogout, validateUserLogged, toggleHiddenDropdown, c
           </ul>
         </div>
         <div className='spacer2' />
-        {validateUserLogged() && (<>
-          <div className='checkout-container'>
-            <div className='checkout-icon' />
-            <button onClick={onLogout}>LOGOUT</button>
-          </div>
-        </>)}
-        {!validateUserLogged() && (<>
-          <div className='register-container'>
-            <div className='register-icon' />
-            <Link to='/register'>Register</Link>
-            <Link to='/login'>Login</Link>
-          </div>
-        </>)}
+        {validateUserLogged() && (
+          <>
+            <div className='checkout-container'>
+              <div className='checkout-icon' />
+              <button onClick={onLogout}>LOGOUT</button>
+            </div>
+          </>)}
+        {!validateUserLogged() && (
+          <>
+            <div className='register-container'>
+              <div className='register-icon' />
+              <Link to='/register'>Register</Link>
+              <Link to='/login'>Login</Link>
+            </div>
+          </>)}
         <div className='icons-container'>
           <CartToggle toggleHiddenDropdown={toggleHiddenDropdown} reference={cartToggleRef} />
           <CartQuantityIcon quantity={quantityCart} />
@@ -40,3 +49,5 @@ export default function ({ onLogout, validateUserLogged, toggleHiddenDropdown, c
     </header>
   )
 }
+
+export default NavBar

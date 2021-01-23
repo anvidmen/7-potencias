@@ -5,7 +5,7 @@ import { searchLessons } from 'client-logic'
 import { transitions, positions, Provider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 
-export default function ({ addToCart, isLoggedIn }) {
+const Products = ({ addToCart, isLoggedIn }) => {
   const [error, setError] = useState()
   const [products, setProducts] = useState([])
 
@@ -41,11 +41,16 @@ export default function ({ addToCart, isLoggedIn }) {
           <a>Group</a>
         </section>
         <section className='description-card'>
-          {products && products.map(product => (<>
-            <Card key={product.id} product={product} addToCart={addToCart} isLoggedIn={isLoggedIn} />
-          </>))}
+          {products && products.map(product => (
+            <>
+              <Card key={product.id} product={product} addToCart={addToCart} isLoggedIn={isLoggedIn} />
+            </>
+          ))}
+          {error}
         </section>
       </Provider>
     </section>
   )
 }
+
+export default Products

@@ -2,7 +2,7 @@ import React from 'react'
 import './Products.sass'
 import { useAlert } from 'react-alert'
 
-export default function ({ product, addToCart, isLoggedIn }) {
+const Card = ({ product, addToCart, isLoggedIn }) => {
   const { id, name, style, price } = product
   const alert = useAlert()
 
@@ -33,3 +33,5 @@ export default function ({ product, addToCart, isLoggedIn }) {
     </section>
   )
 }
+
+export default Card

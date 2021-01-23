@@ -1,32 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Home.sass'
 import Carousel from './Carousel'
 import { retrieveUser } from 'client-logic'
 
-export default class extends Component {
-  constructor () {
-    super()
+const Home = () => {
+  const [user, setUser] = useState()
 
-    this.state = {}
-  }
-
-  componentDidMount () {
+  useEffect(() => {
     try {
       retrieveUser()
-        .then(user => this.setState({ name: user.name }))
+        .then(user => setUser(user.name))
     } catch (error) {
       throw error
     }
-  }
+  }, [])
 
-  render () {
-    return (
-      <section className='home'>
-        <h1>Hello {this.state.name}!</h1>
-        <Carousel />
+  return (
+    <section className='home'>
+      <h1>Hello {user}!</h1>
+      <Carousel />
 
-        <h2>Introduction</h2>
-        <p>
+      <h2>Introduction</h2>
+      <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br />
         Aenean commodo ligula eget dolor. Aenean massa.<br />
         Cum sociis natoque penatibus et magnis dis parturient montes,<br />
@@ -51,9 +46,10 @@ export default class extends Component {
         Etiam sit amet orci eget eros faucibus tincidunt.<br />
         Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.<br />
         Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.<br />
-          <br />
-        </p>
-      </section>
-    )
-  }
+        <br />
+      </p>
+    </section>
+  )
 }
+
+export default Home

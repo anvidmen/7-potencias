@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import './Carousel.sass'
 import Slider from 'react-slick'
 
-export default function () {
+const Carousel = () => {
   function importAll (r) {
     return r.keys().map(r)
   }
@@ -25,10 +25,10 @@ export default function () {
       >
         {images && images.map((image) => {
           return (
-            <div className='image'>
-              <div class="shadow">
-              <img src={image} />
-                  </div>
+            <div key className='image'>
+              <div className='shadow'>
+                <img alt='carousel' src={image} />
+              </div>
             </div>
           )
         })}
@@ -36,3 +36,5 @@ export default function () {
     </section>
   )
 }
+
+export default Carousel
